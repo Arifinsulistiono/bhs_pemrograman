@@ -1,0 +1,102 @@
+@startuml
+start
+
+:Menu Utama;
+:1. Makanan;
+:2. Minuman;
+:3. Exit;
+: Pilih menu;
+
+switch (pilihan) {
+    case 1:
+        :Menu Makanan;
+        :1. Pecel Lele;
+        :2. Nasi Goreng;
+        :3. Kembali;
+        : Pilih menu makanan;
+
+        switch (pilihanMakanan) {
+            case 1:
+                :Anda memilih Pecel Lele;
+                :Masukkan jumlah pesanan;
+                :Total harga = 15000 * qty;
+                :Tampilkan total harga;
+                :Apakah ingin mengulangi proses ini? (y/n);
+                if (ulang == 'y' or ulang == 'Y') then (yes)
+                    :Kembali ke menu makanan;
+                    repeat
+                else (no)
+                    :Kembali ke menu utama;
+                endif
+                break;
+            case 2:
+                :Anda memilih Nasi Goreng;
+                :Masukkan jumlah pesanan;
+                :Total harga = 20000 * qty;
+                :Tampilkan total harga;
+                :Apakah ingin mengulangi proses ini? (y/n);
+                if (ulang == 'y' or ulang == 'Y') then (yes)
+                    :Kembali ke menu makanan;
+                    repeat
+                else (no)
+                    :Kembali ke menu utama;
+                endif
+                break;
+            case 3:
+                :Kembali ke menu utama;
+                break;
+            else
+                :Pilihan tidak valid. Coba lagi;
+                break;
+        }
+        break;
+    case 2:
+        :Menu Minuman;
+        :1. Teh Manis;
+        :2. Air Putih;
+        :3. Kembali;
+        : Pilih menu minuman;
+
+        switch (pilihanMinuman) {
+            case 1:
+                :Anda memilih Teh Manis;
+                :Masukkan jumlah pesanan;
+                :Total harga = 5000 * qty;
+                :Tampilkan total harga;
+                :Apakah ingin mengulangi proses ini? (y/n);
+                if (ulang == 'y' or ulang == 'Y') then (yes)
+                    :Kembali ke menu minuman;
+                    repeat
+                else (no)
+                    :Kembali ke menu utama;
+                endif
+                break;
+            case 2:
+                :Anda memilih Air Putih;
+                :Masukkan jumlah pesanan;
+                :Total harga = 2000 * qty;
+                :Tampilkan total harga;
+                :Apakah ingin mengulangi proses ini? (y/n);
+                if (ulang == 'y' or ulang == 'Y') then (yes)
+                    :Kembali ke menu minuman;
+                    repeat
+                else (no)
+                    :Kembali ke menu utama;
+                endif
+                break;
+            case 3:
+                :Kembali ke menu utama;
+                break;
+            else
+                :Pilihan tidak valid. Coba lagi;
+                break;
+        }
+        break;
+    case 3:
+        :Keluar dari program;
+        stop
+    else
+        :Pilihan tidak valid. Coba lagi;
+        break;
+}
+@enduml

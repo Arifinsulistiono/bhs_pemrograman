@@ -1,6 +1,6 @@
 @startuml Pert5
 start
-:Initialize Variables;
+:Menu pilihan;
 while (pilih !='5') is (control statement iteration)
         :Display Menu;
         :Get User Input(pilih);

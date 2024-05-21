@@ -1,0 +1,43 @@
+@startuml
+start
+
+:Menu();
+:Masukkan pilihan operasi;
+
+repeat
+    :Pilih operasi (1-4) atau 0 untuk keluar;
+    if (pilihan)
+        :Penjumlahan;
+        :Masukkan angka pertama;
+        :Masukkan angka kedua;
+        :Tampilkan hasil penjumlahan;
+    elseif (pilihan)
+        :Pengurangan;
+        :Masukkan angka pertama;
+        :Masukkan angka kedua;
+        :Tampilkan hasil pengurangan;
+    elseif (pilihan)
+        :Perkalian;
+        :Masukkan angka pertama;
+        :Masukkan angka kedua;
+        :Tampilkan hasil perkalian;
+    elseif (pilihan)
+        :Pembagian;
+        :Masukkan angka pertama;
+        :Masukkan angka kedua;
+        if (b != 0) then (yes)
+            :Tampilkan hasil pembagian;
+        else (no)
+            :Error: Pembagian dengan nol tidak diperbolehkan;
+        endif
+    elseif (pilihan)
+        :Keluar dari program;
+        break
+    else
+        :Pilihan tidak valid. Silakan coba lagi;
+    endif
+
+repeat while (pilihan != 0)
+
+stop
+@enduml

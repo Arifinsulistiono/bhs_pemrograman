@@ -1,0 +1,56 @@
+@startuml
+start
+
+:Mulai;
+:Program dimulai;
+
+:Tampilkan Menu;
+:Menu Pasar Motor ditampilkan, memberikan pilihan kepada pengguna;
+
+:Input Pilihan Pengguna;
+
+if (Pilihan pengguna = 1?) then (yes)
+    :Input: Merek, Model, Tahun, Harga, Kondisi;
+    :Tambahkan Motor ke Daftar;
+    :Kembali ke Menu;
+else (no)
+    if (Pilihan pengguna = 2?) then (yes)
+        :Input Indeks Motor, Merek Baru, Model Baru, Tahun Baru, Harga Baru, Kondisi Baru;
+        :Perbarui informasi motor di daftar;
+        :Kembali ke Menu;
+    else (no)
+        if (Pilihan pengguna = 3?) then (yes)
+            :Input Indeks Motor;
+            if (Indeks Valid?) then (yes)
+                :Hapus Motor dari Daftar;
+                :Kembali ke Menu;
+            else (no)
+                :Tampilkan Error: Indeks Tidak Valid;
+                :Kembali ke Menu;
+            endif
+        else (no)
+            if (Pilihan pengguna = 4?) then (yes)
+                :Tampilkan Semua Motor;
+                :Kembali ke Menu;
+            else (no)
+                if (Pilihan pengguna = 5?) then (yes)
+                    :Input Merek dan Model;
+                    :Cari Motor berdasarkan Merek dan Model;
+                    :Tampilkan Hasil Pencarian;
+                    :Kembali ke Menu;
+                else (no)
+                    if (Pilihan pengguna = 6?) then (yes)
+                        :Tampilkan Pesan "Keluar...";
+                        :Selesai;
+                        stop
+                    else (no)
+                        :Tampilkan Pesan "Pilihan Tidak Valid";
+                        :Kembali ke Menu;
+                    endif
+                endif
+            endif
+        endif
+    endif
+endif
+
+@enduml

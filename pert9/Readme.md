@@ -59,14 +59,20 @@ Pertimbangkan contoh berikut:
 # anggota set harus bertipe data yang tidak dapat diubah
 set_fruit = { 'mangga', 'lemon', 'alpukat', True, 1, 2, 3 }
 # kita dapat menjadikan tuple sebagai anggota
-# karena tidak dapat diubah keyboard_= {
+# karena tidak dapat diubah 
+keyboard_= {
 (1, 2, 3), (4, 5, 6),
-(7, 8, 9),
+(7, 8, 9),}
+
 Tetapi kita tidak dapat menyertakan list sebagai anggota karena list dapat diubah. Pertimbangkan contoh berikut:
+
 x = set{ 35, 100, ['a', 'b'] }
+
 Pesan kesalahan:
-Unaaul
-Traceback (panggilan terakhir paling baru): File "<stdin>", baris 1, di <module> TypeError: unhashable type: 'list'
+
+Traceback (panggilan terakhir paling baru):
+ File "<stdin>", baris 1, di <module> 
+ TypeError: unhashable type: 'list'
 # c. Tidak Ada Nilai Duplikat
 (Set)
 Set dalam python juga tidak dapat menerima nilai duplikat. Jika kita memasukkan nilai yang sudah ada dalam satu set, maka nilai tersebut hanya akan muncul atau dimasukkan satu kali. Perhatikan contoh berikut:

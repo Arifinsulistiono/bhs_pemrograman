@@ -109,3 +109,26 @@ c. pop() Mengambil dan menghapus nilai di sebelah kiri. .clear() Menghapus semua
 contoh:
 
 set = {'virtual', 'virtuous', 100, ('a', 'b'), false, True} print (set)
+
+
+# will error if the value 100 is not in the set
+set.remove(100)
+print(set)
+# will not error if ('a', 'b') is not in the set set.discard (('a', 'b')) print(set)
+# remove the value on the left Removedvalue = set.pop()
+print('Removed value =', valueDeleted) print(set)
+# delete all values set.clear() print(set)
+Outputs: Universitas
+(False, True, 100, 'maya', 'budi', ('a', 'b')}
+(False, True, 'maya', 'budi', ('a', 'b'))
+(False, True, 'maya', 'budi'}
+nilaiYangDihapus = False (True, 'maya', 'budi'}
+set()
+nggul
+add()
+f. Functions (Sets)
+The following is a summary of the built-in functions of the data set type that we can use:
+|  Function  |               Utility             |
+| :--------: | :-----------------------------:   |
+|add()       |Menambahkan satu anggota ke set    |
+|clear()     |Menghapus seluruh set              |

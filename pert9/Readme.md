@@ -81,7 +81,9 @@ Maka kata "pagi" hanya akan dimasukkan satu kali:
 Seperti yang telah disebutkan di atas bahwa meskipun nilai set tidak dapat diubah, nilai tersebut masih dapat ditambahkan dan dihapus. Kita dapat menambahkan anggota baru ke set dengan fungsi add() dan update(). Perhatikan contoh berikut:
 alphabet_set = {'a', 'b', 'c'} print(alphabetical set)
 # tambahkan satu per satu set_abjad.add('d') set_abjad.add('e')
-# tambahkan lebih dari satu anggota sekaligus set_abjad.update({ 'f', 'g' }) # bisa juga menggunakan daftar set_abjad.update(['h', 'i'])
+
+# tambahkan lebih dari satu anggota sekaligus 
+set_abjad.update({ 'f', 'g' }) # bisa juga menggunakan daftar set_abjad.update(['h', 'i'])
 print(alphabetical set)
 Keluaran: Sa unaqur
 ('a', 'c', 'b'} ('d', '', 'e',

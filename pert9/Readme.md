@@ -7,8 +7,11 @@ In this material, we will discuss advanced data structures, namely sets and dict
 # 2. Set
 
 A set in the python programming language is a collective data type that is used to store multiple values in a single variable with the following conditions:
+
 a.stored member values must be unique (not duplicates)
+
 b.The value of the member that has been entered cannot be changed anymore
+
 c.set is unordered aka unordered-which means it can't be accessed by index.
 
 To better understand the 3 points above, we will immediately do the practice.

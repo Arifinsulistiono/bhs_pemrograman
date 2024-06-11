@@ -1,10 +1,10 @@
-#1. Definisi
+# 1. Definisi
 
 Array (dalam bahasa python) adalah struktur yang dapat menyimpan dan mengatur kumpulan data. Struktur data berbicara tentang cara menyimpan, mengatur, mengelompokkan, dan merepresentasikan data. Struktur data sangat penting dan harus dikuasai oleh seorang programmer. Di forum-forum pemrograman, saya sering menemukan pertanyaan yang menurut saya dapat dipecahkan jika orang tersebut memahami konsep struktur data.
 
 Dalam materi ini, kita akan membahas struktur data tingkat lanjut, yaitu set dan dictionary.
 
-#2. Set
+# 2. Set
 
 Set dalam bahasa pemrograman python adalah tipe data kolektif yang digunakan untuk menyimpan beberapa nilai dalam satu variabel dengan ketentuan sebagai berikut:
 
@@ -79,19 +79,27 @@ Maka kata "pagi" hanya akan dimasukkan satu kali:
 
 # d. Menambahkan/Memperbarui Elemen Set
 Seperti yang telah disebutkan di atas bahwa meskipun nilai set tidak dapat diubah, nilai tersebut masih dapat ditambahkan dan dihapus. Kita dapat menambahkan anggota baru ke set dengan fungsi add() dan update(). Perhatikan contoh berikut:
-alphabet_set = {'a', 'b', 'c'} print(alphabetical set)
-# tambahkan satu per satu set_abjad.add('d') set_abjad.add('e')
+alphabet_set = {'a', 'b', 'c'} 
+print(alphabetical set)
+
+# tambahkan satu per satu 
+set_abjad.add('d') 
+set_abjad.add('e')
 
 # tambahkan lebih dari satu anggota sekaligus 
-set_abjad.update({ 'f', 'g' }) # bisa juga menggunakan daftar set_abjad.update(['h', 'i'])
+set_abjad.update({ 'f', 'g' })
+ # bisa juga menggunakan daftar 
+set_abjad.update(['h', 'i'])
 print(alphabetical set)
-Keluaran: Sa unaqur
+Keluaran: 
 ('a', 'c', 'b'} ('d', '', 'e',
 'b', 'g', 'h', 'f', 'c'}
-Contoh:
+
 # e. Hapus/hilangkan Elemen Set
 Untuk menghapus anggota dari suatu set, ada 4 fungsi yang dapat kita gunakan:
 a.remove(value) Untuk menghapus nilai yang dicari. Jika nilai yang dicari tidak ada, maka akan terjadi kesalahan.
 b. discard(value) Untuk menghapus nilai yang dicari. Jika nilai yang dicari tidak ada, tidak akan ada kesalahan.
 c. pop() Mengambil dan menghapus nilai di sebelah kiri. .clear() Menghapus semua anggota.
+contoh:
+
 set = {'virtual', 'virtuous', 100, ('a', 'b'), false, True} print (set)

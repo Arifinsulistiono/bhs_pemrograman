@@ -14,7 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $data = DB::connection('mysq;')->table('products')->get();
+        $data = DB::connection('mysql')->table('products')->get();
         return response()->json($data, 200);
     }
 
@@ -64,9 +64,22 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show($id)
     {
-        //
+        $data = Product::find($id);
+        if($data){
+            return response()->json([
+                'success' => true,
+                'message' => 'Data Retrieve',
+                'data' => $data
+            ]);
+        } else {
+            return response()->json([
+                'success' => false,
+                'message' => 'Parameter Not Found',
+            ]);
+        }
+        
     }
 
     /**
@@ -75,9 +88,28 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required'
+        ]);
+
+        $data = Product::find($id);
+        if($data) {
+            
+            $data->name = $request->input('name');
+            $data->save();
+            return response()->json([
+                'success' => true,
+                'message' => 'Data Update',
+                'data' => $data
+            ]);
+        } else{
+            return response()->json([
+                'success' => true,
+                'message' => 'Error Update'
+            ]);
+        }
     }
 
     /**
@@ -98,8 +130,22 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy($id)
     {
-        //
+        $data = Product::find($id);
+        if($data){
+            $data->delete();
+            return response()->json([
+                'success' => true,
+                'message' => 'Berhasil Di Hapus',
+                'data' => $data
+            ]);
+        } else {
+            return response()->json([
+                'success' => false,
+                'message' => 'Parameter Not Found'
+            ]);
+        }
+        
     }
 }

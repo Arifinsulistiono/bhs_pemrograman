@@ -96,7 +96,7 @@ class ProductController extends Controller
 
         $data = Product::find($id);
         if($data) {
-            
+             
             $data->name = $request->input('name');
             $data->save();
             return response()->json([

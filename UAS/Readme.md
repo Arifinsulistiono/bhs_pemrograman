@@ -12,7 +12,7 @@
 
 >1.what(apa):
 
->apa jenis komplain nya?
+>apa saja jenis komplain nya?
 
     Gangguan layanan internet (kecepatan lambat, koneksi putus-putus).
     Masalah tagihan (tagihan yang tidak sesuai, biaya tambahan).
